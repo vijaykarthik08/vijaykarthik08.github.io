@@ -36,7 +36,7 @@ nav a {
 }
 
 nav a:hover {
-   color: green;
+   color: #FF6000;
 }
 
 nav li:first-child {
@@ -45,7 +45,7 @@ nav li:first-child {
 }
 
 nav strong {
-   color: green;
+   color: #FF6000;
 }
 
 nav li:first-child a:hover {
