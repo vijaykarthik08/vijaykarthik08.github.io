@@ -62,3 +62,23 @@ nav li:first-child a:hover {
    padding-left: 3%;
    padding-right: 3%;
 }
+
+.wave {
+  animation-name: wave-animation; /* Refers to the @keyframes below */
+  animation-duration: 2.5s;        /* The time it takes to complete one cycle */
+  animation-iteration-count: infinite; /* Keeps the animation looping forever */
+  transform-origin: 70% 70%;       /* Sets the pivot point to the bottom-left of the hand */
+  display: inline-block;           /* Needed for the transform to work correctly on an inline element */
+  font-size: 50px;                 /* Make the emoji visible */
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0.0deg) }
+  10% { transform: rotate(14.0deg) } /* Rotates the hand clockwise */
+  20% { transform: rotate(-8.0deg) } /* Rotates the hand counter-clockwise */
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate(0.0deg) }  /* Returns to the starting position */
+  100% { transform: rotate(0.0deg) } /* Stays at rest for the remainder of the duration (60% to 100%) */
+}
