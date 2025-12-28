@@ -67,7 +67,7 @@ nav li:first-child a:hover {
   animation-name: wave-animation; /* Refers to the @keyframes below */
   animation-duration: 2.5s;        /* The time it takes to complete one cycle */
   animation-iteration-count: infinite; /* Keeps the animation looping forever */
-  transform-origin: 70% 70%;       /* Sets the pivot point to the bottom-left of the hand */
+  transform-origin: 90% 90%;       /* Sets the pivot point to the bottom-left of the hand */
   display: inline-block;           /* Needed for the transform to work correctly on an inline element */
   font-size: 50px;                 /* Make the emoji visible */
 }
