@@ -176,3 +176,28 @@ nav li:first-child a:hover {
 .sidebar a {
    width: 100%;
 }
+
+.menu {
+   display: none;
+}
+
+@media(max-width:800px) {
+   .hideOnMobile {
+      display: none;
+   }
+
+   .menu {
+      display: block;
+   }
+
+   .glass {
+      flex-direction: column;
+   }
+}
+
+@media(max-width:500px) {
+   .sidebar {
+      width: 100%;
+   }
+}
+
