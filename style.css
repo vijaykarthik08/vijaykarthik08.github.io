@@ -6,17 +6,10 @@
 body {
    min-height: 100vh;
    margin: 0;
-   background-color: #010805; /* Solid dark base */
-   overflow-x: hidden;
-   color: white;
-   font-family: sans-serif;background-color: #010805; /* Solid dark base */
+   background-color: #010805;
    overflow-x: hidden;
    color: white;
    font-family: sans-serif;
-
-   /* display */
-
-
 }
 
 nav {
@@ -158,4 +151,28 @@ nav li:first-child a:hover {
 @keyframes move {
   from { transform: translate(0, 0) scale(1); }
   to { transform: translate(20vw, 20vh) scale(1.2); }
+}
+
+.sidebar {
+   position: fixed;
+   top: 0;
+   right: 0;
+   height: 100vh;
+   width: 250px;
+   z-index: 999;
+   background-color: rgba(0, 0, 0, 0.2);
+   box-shadow: 0 10px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(10px);
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-start;
+}
+
+.sidebar li {
+   width: 100%;
+}
+
+.sidebar a {
+   width: 100%;
 }
