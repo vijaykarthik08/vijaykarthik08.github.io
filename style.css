@@ -5,7 +5,15 @@
 
 body {
    min-height: 100vh;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   margin: 0;
+   background-color: #010805; /* Solid dark base */
+   overflow-x: hidden;
+   color: white;
+   font-family: sans-serif;background-color: #010805; /* Solid dark base */
+   overflow-x: hidden;
+   color: white;
+   font-family: sans-serif;
+
 }
 
 nav {
@@ -31,12 +39,12 @@ nav a {
    padding: 0 30px;
    text-decoration: none;
    display: flex;
-   color: black;
+   color: white;
    align-items: center;
 }
 
 nav a:hover {
-   color: #FF6000;
+   color: green;
 }
 
 nav li:first-child {
@@ -45,16 +53,16 @@ nav li:first-child {
 }
 
 nav strong {
-   color: #FF6000;
+   color: green;
 }
 
 nav li:first-child a:hover {
-   color: black;
+   color: white;
 }
 
 .intro {
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    align-items: center;
    justify-content: center;
    text-align: center;
@@ -64,21 +72,68 @@ nav li:first-child a:hover {
 }
 
 .wave {
-  animation-name: wave-animation; /* Refers to the @keyframes below */
-  animation-duration: 2.5s;        /* The time it takes to complete one cycle */
-  animation-iteration-count: infinite; /* Keeps the animation looping forever */
-  transform-origin: 90% 90%;       /* Sets the pivot point to the bottom-left of the hand */
-  display: inline-block;           /* Needed for the transform to work correctly on an inline element */
-  font-size: 50px;                 /* Make the emoji visible */
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite; 
+  transform-origin: 90% 90%;
+  display: inline-block;      
+  font-size: 50px;        
 }
 
 @keyframes wave-animation {
   0% { transform: rotate(0.0deg) }
-  10% { transform: rotate(14.0deg) } /* Rotates the hand clockwise */
-  20% { transform: rotate(-8.0deg) } /* Rotates the hand counter-clockwise */
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) } 
   30% { transform: rotate(14.0deg) }
   40% { transform: rotate(-4.0deg) }
   50% { transform: rotate(10.0deg) }
-  60% { transform: rotate(0.0deg) }  /* Returns to the starting position */
-  100% { transform: rotate(0.0deg) } /* Stays at rest for the remainder of the duration (60% to 100%) */
+  60% { transform: rotate(0.0deg) } 
+  100% { transform: rotate(0.0deg) }
+}
+
+.blob-cont {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(80px);
+}
+
+.blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: move 20s infinite alternate;
+}
+
+.blob:nth-child(1) {
+  background: #00ff7f;
+  top: -10%;
+  left: -10%;
+}
+
+.blob:nth-child(2) {
+  background: #008080;
+  bottom: -10%;
+  right: -10%;
+  animation-duration: 25s;
+  animation-direction: alternate-reverse;
+}
+
+.blob:nth-child(3) {
+  background: #004d40;
+  top: 40%;
+  left: 30%;
+  width: 600px;
+  height: 600px;
+  animation-duration: 30s;
+}
+
+@keyframes move {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(20vw, 20vh) scale(1.2); }
 }
