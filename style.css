@@ -181,7 +181,7 @@ nav li:first-child a:hover {
    display: none;
 }
 
-@media(max-width:800px) {
+@media(max-width:600px) {
    .hideOnMobile {
       display: none;
    }
